@@ -23,6 +23,7 @@ p {
 
 body {
   display: flex;
+  overflow-x: hidden
 }
 * {
   box-sizing: border-box;
@@ -315,14 +316,15 @@ nav {
   background-image: url(images/full.png);
   background-size: cover;
   background-position: center;
+  position: absolute;
   display: block;
   filter: blur(10px) brightness(3%);
   -webkit-filter: blur(10px) brightness(80%);
-  height: 600px;
+  height: 800px;
   left: 0;
-  position: absolute;
   right: 0;
-  z-index: -888;
+  z-index: -88;
+  width: auto;
   transform: scale(1.1);
 }
 
