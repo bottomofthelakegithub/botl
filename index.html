@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Adam - Digital Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bottom of The Lake. We're from Oshkosh WI.">
+  <link rel="stylesheet" type="text/css" href="styles-min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- MOBILE NAV -->
+
+    <nav class="desktop-hide">
+      <div class="top-nav">
+        <h1>bottom of the lake</h1>
+        <div class="menu">
+          <div class="bit-1"></div>
+          <div class="bit-2"></div>
+          <div class="bit-3"></div>
+        </div>
+      </div>
+      <div class="nav-expand">
+        <div class="nav-expand-text">
+          <a href="#home">
+            <p class="desc">music</p>
+          </a>
+          <a href="#tour">
+            <p class="desc">tour</p>
+          </a>
+          <a href="#about">
+            <p class="desc">about</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <main>
+      <div class="music">
+        <div class="bg-image"></div>
+        <div class="album-div">
+
+          <h3>newest release</h3>x
+          <div class = album>
+            <img src="images/album.jpg" />
+          </div>
+          <h6>i'll keep this safe here</h6>
+          <a href="https://open.spotify.com/album/2pGqIAY3LYjkIcMNyTxsEi?si=hJgpQKuMSSCSZTizs-KCIg"><img class=album-icon src="images/spotify.png" /></a>
+          <a href="https://bottomofthelakewi.bandcamp.com/album/ill-keep-this-safe-here" ><img class=album-icon src="images/bandcamp.png" /></a>
+        </div>
+
+      </div>
+
+      <div id=bm>
+      </div>
+
+    </main>
+
+
+    <!-- nav menu -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".menu").click(function() {
+          $(".nav-expand").toggle("slide", {
+            direction: 'right'
+          });
+        });
+        $(".icon").click(function() {
+          $(".nav-expand").slideUp(100);
+        })
+      });
+    </script>
+    <!-- icon changing -->
+    <script type="text/javascript">
+      var menu = document.querySelector('.menu');
+
+      function toggleMenu() {
+        menu.classList.toggle('open');
+      }
+      menu.addEventListener('click', toggleMenu);
+    </script>
+
+    <script>
+      $(window).load(function() {
+        $(".col-3 input").val("");
+
+        $(".input-effect input").focusout(function() {
+          if ($(this).val() != "") {
+            $(this).addClass("has-content");
+          } else {
+            $(this).removeClass("has-content");
+          }
+        })
+      });
+    </script>
+
+  </div>
+</body>
