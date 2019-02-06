@@ -68,7 +68,7 @@ body {
   position: absolute;
   width: 1.7em;
   top: 50%;
-  left: 50%;
+  left: 49%;
   height: 0.35em;
   background: white;
   transform: translate(-50%, -50%);
@@ -102,7 +102,7 @@ body {
 .menu.open .bit-1:before {
   top: 0.6em;
   width: 1.2em;
-  transform: rotate(45deg);
+  transform: rotate(30deg);
   transform-origin: left bottom;
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FFDCEA;
@@ -110,7 +110,7 @@ body {
 .menu.open .bit-1:after {
   top: 0.6em;
   width: 1.2em;
-  transform: rotate(-45deg);
+  transform: rotate(-30deg);
   transform-origin: right bottom;
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FFDCEA;
@@ -124,7 +124,7 @@ body {
 .menu.open .bit-3:before {
   bottom: 0.6em;
   width: 1.2em;
-  transform: rotate(-45deg);
+  transform: rotate(-30deg);
   transform-origin: left top;
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
   background: #FFDCEA;
@@ -132,7 +132,7 @@ body {
 .menu.open .bit-3:after {
   bottom: 0.6em;
   width: 1.2em;
-  transform: rotate(45deg);
+  transform: rotate(30deg);
   transform-origin: right top;
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
   background: #FFDCEA;
@@ -268,9 +268,9 @@ nav {
   -webkit-filter: blur(10px) brightness(80%);
   height: 600px;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
-  z-index: -9999;
+  z-index: -999999999999;
   transform: scale(1.1);
 }
 
@@ -285,6 +285,7 @@ nav {
   width: 100%;
   text-align: center;
   padding-bottom: 40px;
+  z-index: 123123123123123
 }
 
 .tour h3 {
@@ -306,25 +307,30 @@ nav {
   border-radius: 20px;
 }
 
+.merch-item a {
+    text-decoration: none;
+    color: black
+}
+
 /* about */
 
 .about {
   height: 700px;
-  padding-bottom: 100px
+  padding-bottom: 100px;
+  z-index: 4324342234
 }
 .about-bg {
   background-image: url(images/full.png);
   background-size: cover;
   background-position: center;
-  position: absolute;
   display: block;
   filter: blur(10px) brightness(3%);
   -webkit-filter: blur(10px) brightness(80%);
-  height: 800px;
+  height: 700px;
   left: 0;
+  position: absolute;
   right: 0;
-  z-index: -88;
-  width: auto;
+  z-index: -1111;
   transform: scale(1.1);
 }
 
@@ -333,19 +339,23 @@ nav {
   text-align: center;
   padding: 50px;
   line-height: 2em;
+  z-index: 423423234;
 }
 
 .about-box h3 {
-  padding-bottom: 20px
+  padding-bottom: 20px;
+  z-index: 423423234;
 }
 
 .about-box p {
   font-size: 0.8em;
+  z-index: 423423234;
 }
 
 .card-box {
   background: green;
   height: 00px;
+  z-index: 423423234;
 }
 
 
