@@ -29,6 +29,12 @@ body {
   box-sizing: border-box;
 }
 
+h3 {
+  background: white;
+  padding: 3px 5px !important;
+  color: black;
+}
+
 /* nav */
 
 .menu {
@@ -298,8 +304,7 @@ nav {
 }
 
 .tour h3 {
-  width: 100%;
-  padding: 50px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
 }
 
 .tour p {
@@ -307,6 +312,7 @@ nav {
   text-align: center;
   font-size: 0.8em;
   line-height: 2.5em;
+  width: 100%;
 }
 
 .merch {
@@ -314,6 +320,13 @@ nav {
   height: 150px;
   margin: 30px 10px -20px;
   border-radius: 20px;
+}
+
+.merch-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 .merch-item a {
@@ -324,9 +337,11 @@ nav {
 /* about */
 
 .about {
-  height: 700px;
   padding-bottom: 100px;
-  z-index: 4324342234;
+  z-index: 432;
+  overflow: hidden;
+  -webkit-overflow: hidden;
+  position: relative
 }
 .about-bg {
   background-image: url(images/full.png);
@@ -339,7 +354,7 @@ nav {
   left: 0;
   position: absolute;
   right: 0;
-  z-index: -1111;
+  z-index: -999999999999;
   transform: scale(1.1);
 }
 
@@ -352,7 +367,6 @@ nav {
 }
 
 .about-box h3 {
-  padding-bottom: 20px;
   z-index: 423423234;
 }
 
@@ -361,10 +375,24 @@ nav {
   z-index: 423423234;
 }
 
+.cards {
+  width: auto;
+  text-align: center;
+  background: #FBFBC7;
+  padding-top: 50px;
+}
+.cards h3 {
+  width: 41px;
+  text-align: center;
+  margin: auto;
+
+}
+
 .card-box {
-  background: green;
-  margin: 50px 0px;
+  padding-top: 20px;
+  background: #FBFBC7;
   z-index: 423423234;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
