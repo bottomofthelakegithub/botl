@@ -1,19 +1,32 @@
 /* mobile */
 
 /* global */
+
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-body, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, ul, li, html {
   font-family: "Cutive Mono";
   font-weight: 600;
   margin: 0px;
   padding: 0px;
 }
+
 a {
   text-decoration: none;
 }
+
 a:after {
   text-decoration: none;
 }
+
 p {
   font-weight: 300;
   margin: 0px;
@@ -24,7 +37,9 @@ p {
 body {
   overflow-x: hidden !important;
   -webkit-overflow-x: hidden !important;
+  height: 100%;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -33,6 +48,14 @@ h3 {
   background: white;
   padding: 3px 5px !important;
   color: black;
+}
+
+.anchor {
+  position: relative;
+  top: -110px;
+  display: block;
+  height: 0;
+  width: 0;
 }
 
 /* nav */
@@ -47,8 +70,8 @@ h3 {
   transform: scale(0.8);
   overflow-x: hidden;
   -webkit-overflow-x: hidden;
-
 }
+
 .menu .bit-1::before {
   content: '';
   left: 0.5em;
@@ -61,6 +84,7 @@ h3 {
   transition: transform 0.3s, top 0.3s;
   border-radius: 5px
 }
+
 .menu .bit-1::after {
   content: '';
   position: absolute;
@@ -73,6 +97,7 @@ h3 {
   transition: transform 0.3s, top 0.3s;
   border-radius: 5px
 }
+
 .menu .bit-2 {
   position: absolute;
   width: 1.7em;
@@ -84,6 +109,7 @@ h3 {
   transition: transform 0.3s 0.3s, width 0.3s 0.6s;
   border-radius: 5px
 }
+
 .menu .bit-3::before {
   content: '';
   position: absolute;
@@ -96,6 +122,7 @@ h3 {
   transition: transform 0.3s, bottom 0.3s;
   border-radius: 5px
 }
+
 .menu .bit-3::after {
   content: '';
   position: absolute;
@@ -108,6 +135,7 @@ h3 {
   transition: transform 0.3s, bottom 0.3s;
   border-radius: 5px
 }
+
 .menu.open .bit-1:before {
   top: 0.6em;
   width: 1.2em;
@@ -116,6 +144,7 @@ h3 {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FFDCEA;
 }
+
 .menu.open .bit-1:after {
   top: 0.6em;
   width: 1.2em;
@@ -124,12 +153,14 @@ h3 {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
   background: #FFDCEA;
 }
+
 .menu.open .bit-2 {
   width: 0.3em;
   transform: translate(-50%, -50%) rotate(90deg);
   transition: transform 0.3s 0.3s, width 0.3s;
   background: #FFDCEA;
 }
+
 .menu.open .bit-3:before {
   bottom: 0.6em;
   width: 1.2em;
@@ -138,6 +169,7 @@ h3 {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
   background: #FFDCEA;
 }
+
 .menu.open .bit-3:after {
   bottom: 0.6em;
   width: 1.2em;
@@ -146,6 +178,7 @@ h3 {
   transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
   background: #FFDCEA;
 }
+
 .top-nav {
   position: fixed;
   height: 50px;
@@ -157,15 +190,15 @@ h3 {
 }
 
 nav {
-  z-index: 999999;
+  z-index: 9999991111212123123;
   color: black;
   width: 100%;
   overflow-x: hidden;
   -webkit-overflow-x: hidden;
-
 }
+
 .top-nav {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   height: 60px;
   letter-spacing: -0.15em;
   color: white;
@@ -186,10 +219,12 @@ nav {
   justify-content: flex-start;
   height: 50px;
 }
+
 .nav-logo {
   height: 50px;
   padding-left: 20px;
 }
+
 .nav-toggle-div {
   width: 50px;
   display: flex;
@@ -198,17 +233,20 @@ nav {
   align-items: center;
   padding-right: 25px;
 }
+
 .nav-toggle {
   width: 45px;
   background: white;
 }
+
 .nav-expand {
   display: none;
   margin-top: 60px;
   position: fixed;
-  z-index: 100;
+  z-index: 109809809800;
   width: 100%;
 }
+
 .nav-expand-text {
   height: 50px;
   display: flex;
@@ -216,17 +254,20 @@ nav {
   padding: 15px;
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
 }
+
 .nav-expand-text a {
   transform: scale(1.2);
   padding: 0px 30px;
   color: white;
 }
+
 .bug-nav {
   margin-top: -60px;
   z-index: 12312312122312;
 }
+
 .bug-nav2 {
   padding-bottom: 50px;
   z-index: 123123123123
@@ -240,7 +281,6 @@ nav {
   position: relative;
   overflow: hidden;
   -webkit-overflow: hidden;
-
 }
 
 .album-div {
@@ -263,6 +303,7 @@ nav {
   align-items: center;
   padding: 10px;
 }
+
 .album img {
   width: 200px;
   margin: auto;
@@ -289,11 +330,11 @@ nav {
   transform: scale(1.1);
 }
 
-
 /* tour */
+
 .tour {
   background: #FFDCEA;
-  margin-top: -30px;
+  margin-top;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -330,8 +371,8 @@ nav {
 }
 
 .merch-item a {
-    text-decoration: none;
-    color: black
+  text-decoration: none;
+  color: black
 }
 
 /* about */
@@ -343,6 +384,7 @@ nav {
   -webkit-overflow: hidden;
   position: relative
 }
+
 .about-bg {
   background-image: url(images/full.png);
   background-size: cover;
@@ -381,11 +423,11 @@ nav {
   background: #FBFBC7;
   padding-top: 50px;
 }
+
 .cards h3 {
   width: 41px;
   text-align: center;
   margin: auto;
-
 }
 
 .card-box {
@@ -416,8 +458,17 @@ nav {
   padding: 3px 5px;
 }
 
+.popup {
+  display: flex;
+  background: green;
+  z-index: 9999999999999999;
+}
 
+.popup-card {
+  width: 80%;
+  height: auto;
 
+}
 
 .work {
   height: 300px;
