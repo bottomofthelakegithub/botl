@@ -360,6 +360,8 @@ nav {
   height: 150px;
   margin: 30px 10px -20px;
   border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+
 }
 
 .merch-box {
@@ -377,7 +379,7 @@ nav {
 /* about */
 
 .about {
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   z-index: 432;
   overflow: hidden;
   -webkit-overflow: hidden;
@@ -409,6 +411,10 @@ nav {
 
 .about-box h3 {
   z-index: 423423234;
+  width: 105px;
+  margin: auto;
+  line-height: 1em;
+  margin-bottom: 20px;
 }
 
 .about-box p {
@@ -421,9 +427,11 @@ nav {
   text-align: center;
   background: #FBFBC7;
   padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
 }
 
-.cards h3 {
+.ush3 {
   width: 41px;
   text-align: center;
   margin: auto;
@@ -448,7 +456,8 @@ nav {
   justify-content: center;
   margin: 3%;
   color: black;
-  font-size: 1.4em;
+  font-size: 1em;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .card p {
@@ -458,16 +467,103 @@ nav {
 }
 
 .popup {
+  width: 90%;
+  left: 5%;
+  padding: 0px;
+  margin-top: -55px;
+  z-index: 9999999999999;
+  position: absolute;
+  border-radius: 10px;
+  height: 400px;
   display: flex;
-  background: green;
-  z-index: 9999999999999999;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
 }
 
-.popup-card {
-  width: 80%;
-  height: auto;
-
+.popup p {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 0.8em;
+  margin: 20px;
 }
+.popup h3 {
+  line-height: 1em !important;
+}
+.close {
+  margin-top: 0px;
+  width: 100%;
+  height: 30px;
+  background: #FF6F6F;
+  margin-bottom: -20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.brettbg {
+  background-image: url(images/brettblur.png);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 400px;
+  width: calc(90% + 3px);
+  margin: auto;
+  border-radius: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -999999999999;
+  transform: scale(1.1);
+}
+
+.zacbg {
+  background-image: url(images/zacblur.png);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 350px;
+  width: calc(90% + 3px);
+  margin: auto;
+  border-radius: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -999999999999;
+  transform: scale(1.1);
+}
+
+.keegbg {
+  background-image: url(images/keegblur.png);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 350px;
+  width: calc(90% + 3px);
+  margin: auto;
+  border-radius: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -999999999999;
+  transform: scale(1.1);
+}
+
+.emerbg {
+  background-image: url(images/emerblur.png);
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 420px;
+  width: calc(90% + 3px);
+  margin: auto;
+  border-radius: 10px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -999999999999;
+  transform: scale(1.1);
+}
+
+
 
 .work {
   height: 300px;
