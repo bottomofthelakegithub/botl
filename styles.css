@@ -425,10 +425,13 @@ nav {
 .cards {
   width: auto;
   text-align: center;
-  background: #FBFBC7;
+  background: url(images/band3.png);
+  background-position: center;
+  background-size: cover;
   padding-top: 50px;
   padding-bottom: 50px;
   justify-content: center;
+  box-shadow: 5px 5px 5px black;
 }
 
 .ush3 {
@@ -439,7 +442,7 @@ nav {
 
 .card-box {
   padding-top: 20px;
-  background: #FBFBC7;
+  background: none;
   z-index: 423423234;
   width: 100%;
   display: flex;
@@ -474,16 +477,16 @@ nav {
   z-index: 9999999999999;
   position: absolute;
   border-radius: 10px;
-  height: 400px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
+  height: auto;
 }
 
 .popup p {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 0.8em;
   margin: 20px;
 }
@@ -497,70 +500,33 @@ nav {
   background: #FF6F6F;
   margin-bottom: -20px;
   border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brettbg {
   background-image: url(images/brettblur.png);
   background-size: cover;
   background-position: center;
-  display: block;
-  height: 400px;
-  width: calc(90% + 3px);
-  margin: auto;
-  border-radius: 10px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -999999999999;
-  transform: scale(1.1);
 }
 
 .zacbg {
   background-image: url(images/zacblur.png);
   background-size: cover;
   background-position: center;
-  display: block;
-  height: 350px;
-  width: calc(90% + 3px);
-  margin: auto;
-  border-radius: 10px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -999999999999;
-  transform: scale(1.1);
 }
 
 .keegbg {
   background-image: url(images/keegblur.png);
   background-size: cover;
   background-position: center;
-  display: block;
-  height: 350px;
-  width: calc(90% + 3px);
-  margin: auto;
-  border-radius: 10px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -999999999999;
-  transform: scale(1.1);
 }
 
 .emerbg {
   background-image: url(images/emerblur.png);
   background-size: cover;
   background-position: center;
-  display: block;
-  height: 420px;
-  width: calc(90% + 3px);
-  margin: auto;
-  border-radius: 10px;
-  left: 0;
-  position: absolute;
-  right: 0;
-  z-index: -999999999999;
-  transform: scale(1.1);
 }
 
 
