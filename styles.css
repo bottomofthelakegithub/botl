@@ -639,6 +639,11 @@
     overflow: hidden;
     -webkit-overflow: hidden;
   }
+  .album-div h3 {
+    animation: slideUp 1s 1.5s;
+    animation-fill-mode: backwards;
+
+  }
   .album-div {
     display: flex;
     flex-wrap: wrap;
@@ -649,6 +654,9 @@
   .album-div h6 {
     width: 100%;
     text-align: center;
+    animation: slideUp 1s 1.5s;
+    animation-fill-mode: backwards;
+
   }
   .album {
     width: 100%;
@@ -656,15 +664,22 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+
   }
   .album img {
     width: 200px;
     margin: auto;
+    animation: slideUp 1s 1.5s;
+    animation-fill-mode: backwards;
+
   }
   .album-icon {
     width: 100px;
     height: 100px;
     padding: 20px;
+    animation: slideUp 1s 1.5s;
+    animation-fill-mode: backwards;
+
   }
   .album-bg {
     background-image: url(images/band2.png);
@@ -692,8 +707,14 @@
     padding-bottom: 40px;
     z-index: 123123123123123
   }
+  .tour-box {
+    width: 100%;
+  }
   .tour h3 {
-    margin: 50px 0px 0px 0px;
+
+    width: 80px;
+    margin: auto;
+        margin-top: 50px;
   }
   .tour p {
     margin-top: 20px;
@@ -701,6 +722,12 @@
     font-size: 0.8em;
     line-height: 2.5em;
     width: 100%;
+  }
+  .merch-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
   }
   .merch {
     width: 150px;
