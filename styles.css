@@ -1,913 +1,813 @@
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-@media only screen and (min-width: 782px) {
-  /* mobile */
-  /* global */
-  main, html, body {
-    height: 100%;
-  }
-  body, h1, h2, h3, h4, h5, h6, p, a, ul, li, html {
-    font-family: "Cutive Mono";
-    font-weight: 600;
-    margin: 0px;
-    padding: 0px;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:after {
-    text-decoration: none;
-  }
-  p {
-    font-weight: 300;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: -0.1em;
-  }
+@font-face {
+  font-family: "coolvetica";
+  src: url("/fonts/coolvetica rg.tff")
+}
 
-  * {
-    box-sizing: border-box;
-  }
-  h3 {
-    background: white;
-    padding: 3px 5px !important;
-    color: black;
-  }
-  .anchor {
-    position: relative;
-    top: -110px;
-    display: block;
-    height: 0;
-    width: 0;
-  }
+@font-face {
+  font-family: "montserrat-i";
+  src: url("/fonts/Montserrat-ThinItalic.ttf")
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("/fonts/Montserrat-Thin.ttf")
+}
+
+@font-face {
+  font-family: "product-sans";
+  src: url("/fonts/Product Sans Regular.ttf")
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.99);
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.99);
+}
+
+html, body, main, h1, h2, h3, h4, h5, h6, p, a, div {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* desktop */
+@media screen and (min-width: 930px) {
   .desktop-hide {
     display: none;
   }
-  /* nav */
-
-  .top-nav {
-    position: fixed;
-    height: 50px;
-    align-items: center;
-    width: 100%;
-    display: flex;
-    background: #0f0f0f;
-    z-index: 1001101010;
+  .index-body {
+    background: url(img/band2.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
   }
-  .links {
-    color: white !important;
+
+  nav {
+    padding: 50px 70px;
+    display: flex;
+  }
+
+  .nav-header {
+    font-family: "coolvetica";
+    font-size: 2.5em;
+    width: 400px;
+  }
+
+  .nav-links a {
+    padding: 0 15px;
+    margin: 0 5px;
+    font-size: 1.6em;
+    font-family: "coolvetica";
+  }
+
+  .nav-links a:hover {
+    color: #888;
+  }
+
+  .nav-links {
+    display: flex;
+    width: calc(100% - 400px);
+    justify-content: flex-end;
+  }
+
+  .index-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 300px);
+    transform: scale(0.8);
+  }
+
+  .album-main {
+    width: 500px;
+    animation: album 2s ease;
+  }
+
+  .album-title {
+    font-family: "coolvetica";
+    font-size: 3.5em;
+    padding: 10px 30px;
+    animation: album-title 2s ease;
+  }
+
+  .circles-main {
+    display: flex;
+    margin-left: 20px;
+    animation: album-circles 2s ease;
+  }
+
+  .circles-main img {
+    width: 70px;
+    padding: 0 10px;
+  }
+
+  .store-body {
+    background: url(img/merchbg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .store-main {
+    font-family: "coolvetica";
+    padding-bottom: 200px;
+    animation: store 1s ease;
+  }
+
+  .store-header {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .store-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    margin: 50px;
+  }
+
+  .card-img {
+    width: 300px;
+  }
+
+  .about-body {
+    background: url(img/jumpy.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .about-main {
+    padding: 25px 70px;
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    grid-template-rows: auto auto;
+    grid-row-gap: 50px;
+    padding-bottom: 200px;
+  }
+
+  .about-text {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .about-text h1 {
+    font-family: "coolvetica";
+    font-size: 3em;
+  }
+
+  .about-text p {
+    font-family: "montserrat-i";
+    font-size: 1.9em;
+  }
+
+  .about-pictures {
+    padding-top: 50px;
+    grid-column: 1 / 2;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-pic {
+    margin: 0 2vw 1vw 0;
+    height: auto;
+    cursor: pointer !important;
+  }
+
+  .about-pic img {
+    width: 12vw;
+    height: 12vw;
+  }
+
+  .about-pic p {
+    font-family: "montserrat-i";
+    font-size: 1.3vw;
+  }
+
+  #zacoda {
+    display: none;
+  }
+
+  #brett {
+    display: none;
+  }
+
+  #emeric {
+    display: none;
+  }
+
+  #keegan {
+    display: none;
+  }
+
+  .about-blurbs {
+    margin-top: 25px;
+    grid-column: 2 / 4;
+    grid-row: 3;
+    height: calc(100% - 50px);
+    width: 100%;
+  }
+
+  .blurb {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    transform: scale(0.9);
+    padding-top: 20px;
+  }
+
+  .zacoda {
+    position: absolute;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    width: 16vw;
+    height: 2.5vw;
+    background: #DE4F3F;
+    z-index: 0
+  }
+
+  .brett {
+    position: absolute;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    width: 15vw;
+    height: 2.5vw;
+    background: #C2B23D;
+    z-index: 0
+  }
+
+  .emeric {
+    position: absolute;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    width: 19vw;
+    height: 2.5vw;
+    background: #F5A4CC;
+    z-index: 0
+  }
+
+  .keegan {
+    position: absolute;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    width: 21vw;
+    height: 2.5vw;
+    background: #2C32CA;
+    z-index: 0
+  }
+
+  .blurb h1 {
+    position: relative;
+    font-size: 2.5vw;
+    margin-top: 0vw;
+    z-index: 999 !important;
+  }
+
+  .blurb h1, .blurb p {
+    padding: 0 2vw;
+    font-family: "montserrat-i"
+  }
+
+  .blurb p {
+    font-size: 1.4vw;
+    margin-top: 10px;
+  }
+
+  .about-tour {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    margin-left: 50px;
+  }
+
+  .about-tour h1 {
+    font-family: "coolvetica";
+    font-size: 3em;
+  }
+
+  .about-tour p {
+    font-family: "montserrat-i";
+    font-size: 1.9em;
+  }
+
+  .about-text p {
+    margin-top: 15px;
+  }
+
+  .about-tour p {
+    margin-top: 15px;
+  }
+
+  footer {
+    height: 175px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-left {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+  .footer-left h1 {
+    font-family: "coolvetica";
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .circles-footer {
+    display: flex;
+    margin-left: 00px;
+  }
+
+  .circles-footer img {
+    width: 35px;
+    padding: 0 10px 0 0;
+  }
+
+  .footer-right {
+    margin-right: 50px;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 70%;
-    padding-right: 50px;
-
-  }
-  .links a {
-    color: white;
-    padding: 30px;
-    font-size: 1.3em;
-    transition: 0.3s;
-    animation: slideUp 1s 0.5s;
-    animation-fill-mode: backwards;
-
-  }
-  .links a:hover {
-    color: #ffdcea;
-    transition: 0.3s;
-  }
-  nav {
-    z-index: 9999991111212123123;
-    color: black;
-    width: 100%;
-    overflow-x: hidden;
-    -webkit-overflow-x: hidden;
-  }
-  .top-nav {
-    background: rgba(0, 0, 0, 0.4);
-    height: 80px;
-    letter-spacing: -0.15em;
-    color: white;
-    display: flex;
-    z-index: 123123132;
-    align-items: center;
-    font-size: 1.3em;
-  }
-  .top-nav h1 {
-    width: 30%;
-    padding-left: 15px;
-    animation:fadeIn 1s 0.5s;
-    animation-fill-mode: backwards;
-  }
-  .nav-logo-div {
-    width: calc(100% - 75px);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 50px;
-  }
-  .nav-logo {
-    height: 50px;
-    padding-left: 20px;
   }
 
-  /* album */
-  .music {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    -webkit-overflow: hidden;
-  }
-  .album-div {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 15vh;
-    color: white;
-    justify-content: center;
-  }
-  .album-div h6 {
-    width: 100%;
-    text-align: center;
-    font-size: 3vh;
-    animation: slideUp 1s 1.5s;
-    animation-fill-mode: backwards;
-  }
-  .album {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-  .album img {
-    width: 60vh;
-    margin: auto;
-    animation: slideUp 1s 1s;
-    animation-fill-mode: backwards;
-  }
-  .album-icon {
-    width: 10vh;
-    height: 10vh;
-    padding: 20px;
-    animation: slideUp 1s 1.3s;
-    animation-fill-mode: backwards;
-  }
-  .album-div h3 {
-    font-size: 5vh;
-    animation: slideUp 1s 1s;
-    animation-fill-mode: backwards;
-  }
-  .album-bg {
-    background-image: url(images/band2.png);
-    background-size: cover;
-    background-position: center;
-    display: block;
-    filter: blur(10px) brightness(3%);
-    -webkit-filter: blur(10px) brightness(80%);
-    height: 100vh;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -999999999999;
-    transform: scale(1.1);
-  }
-  /* tour */
-  .tour {
-    background: #FFDCEA;
-    margin-top;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    padding: 80px;
-    z-index: 123123123123123;
-  }
-  .tour h3 {
-    margin: 50px 0px 0px 0px;
-    height: 30px;
-  }
-  .tour p {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1.3em;
-    line-height: 2.5em;
-    width: 100%;
-  }
-  .tour-box {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .merch {
-    width: 15vw;
-    height: 15vw;
-    margin: 30px 10px -20px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .merch-box {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-  }
-  .merch-item a {
-    text-decoration: none;
-    color: black
-  }
-  /* about */
-  .about {
-    padding-bottom: 0px;
-    z-index: 432;
-    overflow: hidden;
-    -webkit-overflow: hidden;
-    position: relative
-  }
-  .about-bg {
-    background-image: url(images/full.png);
-    background-size: cover;
-    background-position: center;
-    display: block;
-    filter: blur(10px) brightness(3%);
-    -webkit-filter: blur(10px) brightness(80%);
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -999999999999;
-    transform: scale(1.1);
-  }
-  .about-box {
-    color: white;
-    text-align: center;
-    padding: 50px;
-    line-height: 2em;
-    z-index: 423423234;
-  }
-  .about-box h3 {
-    z-index: 423423234;
-    width: 105px;
-    margin: auto;
-    line-height: 1em;
-    margin-bottom: 20px;
-  }
-  .about-box p {
-    font-size: 1.3em;
-    width: 80%;
-    line-height: 3;
-    margin: auto;
-    z-index: 423423234;
-  }
-  .cards {
-    width: auto;
-    text-align: center;
-    background: url(images/band3.png);
-    background-position: center;
-    background-size: cover;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    justify-content: center;
-    box-shadow: 5px 5px 5px black;
-  }
-  .ush3 {
-    width: 41px;
-    text-align: center;
-    margin: auto;
-  }
-  .card-box {
-    padding-top: 20px;
-    background: none;
-    z-index: 423423234;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    width: 19%;
-    height: 25vw;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3%;
-    color: black;
-    font-size: 1.5em;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .card p {
-    background: white;
-    margin-top: 90%;
-    padding: 3px 5px;
-  }
-  .popup {
-    width: 50%;
-    left: 25%;
-    padding: 0px;
-    margin-top: 5%;
-    z-index: 9999999999999;
-    position: absolute;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
-    height: auto;
-    font-size: 1.4em;
-  }
-  .popup p {
-    width: 100%;
-    margin-top: 30px;
-    font-size: 0.8em;
-    margin: 20px;
-  }
-  .popup h3 {
-    line-height: 1em !important;
-  }
-  .close {
-    margin-top: 0px;
-    width: 100%;
-    height: 50px;
-    background: #FF6F6F;
-    margin-bottom: -20px;
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .brettbg {
-    background-image: url(images/brettblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .zacbg {
-    background-image: url(images/zacblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .keegbg {
-    background-image: url(images/keegblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .emerbg {
-    background-image: url(images/emerblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .fontawesome-chevron {
-    font-size: 0.5em;
-  }
-  .footer {
-    height: 150px;
-    background: #FFFFD5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .footer-socials {
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    margin-top: 15px;
-    justify-content: center;
-  }
-  .work {
-    height: 300px;
-    background: #B03939;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    font-size: 0.6em;
+  .footer-right h1 {
+    font-family: "coolvetica";
+    font-size: 1.2em;
+    margin-bottom: 5px;
   }
 }
 
-/* ----------------------------------------------------------- */
-
-@media only screen and (max-width: 781px) {
+/* mobile */
+@media screen and (max-width: 929px) {
   .mobile-hide {
     display: none;
   }
-  /* mobile */
-  /* global */
-  html {
-    height: 100%;
+
+  nav {
+    z-index: 999999999999
   }
-  main {
-    height: 100%;
-  }
-  body, h1, h2, h3, h4, h5, h6, p, a, ul, li, html {
-    font-family: "Cutive Mono";
-    font-weight: 600;
-    margin: 0px;
-    padding: 0px;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  a:after {
-    text-decoration: none;
-  }
-  p {
-    font-weight: 300;
-    margin: 0px;
-    padding: 0px;
-    letter-spacing: -0.1em;
-  }
-  body {
-    overflow-x: hidden !important;
-    -webkit-overflow-x: hidden !important;
-    height: 100%;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  h3 {
-    background: white;
-    padding: 3px 5px !important;
-    color: black;
-  }
-  .anchor {
-    position: relative;
-    top: -110px;
-    display: block;
-    height: 0;
-    width: 0;
-  }
-  /* nav */
+
   .menu {
+    margin-top: 20px;
+    margin-left: 20px;
     width: 23px;
     height: 3em;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding-right: 25px;
     position: relative;
     transform: scale(0.8);
-    overflow-x: hidden;
-    -webkit-overflow-x: hidden;
+    background: none;
+    border-radius: 5px;
   }
+
   .menu .bit-1::before {
     content: '';
     left: 0.5em;
-    top: 0.7em;
+    top: 0.5em;
     position: absolute;
     width: 1em;
     transform-origin: left bottom;
-    height: 0.35em;
-    background: white;
+    height: 0.3em;
+    background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 5px
+    border-radius: 5px 0 0 5px;
   }
+
   .menu .bit-1::after {
     content: '';
     position: absolute;
     right: 0.5em;
-    top: 0.7em;
+    top: 0.5em;
     width: 1em;
     transform-origin: right bottom;
-    height: 0.35em;
-    background: white;
+    height: 0.3em;
+    background: #fff;
     transition: transform 0.3s, top 0.3s;
-    border-radius: 5px
+    border-radius: 0px 10px 10px 0px;
   }
+
   .menu .bit-2 {
     position: absolute;
-    width: 1.7em;
+    width: 2em;
     top: 50%;
     left: 50%;
-    height: 0.35em;
-    background: white;
+    height: 0.3em;
+    background: #fff;
     transform: translate(-50%, -50%);
     transition: transform 0.3s 0.3s, width 0.3s 0.6s;
-    border-radius: 5px
+    border-radius: 5px;
   }
+
   .menu .bit-3::before {
     content: '';
     position: absolute;
-    bottom: 0.7em;
+    bottom: 0.5em;
     left: 0.5em;
     width: 1em;
     transform-origin: left top;
-    height: 0.35em;
-    background: white;
+    height: 0.3em;
+    background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 5px
+    border-radius: 10px 0px 0px 10px;
   }
+
   .menu .bit-3::after {
     content: '';
     position: absolute;
-    bottom: 0.7em;
+    bottom: 0.5em;
     right: 0.5em;
     width: 1em;
     transform-origin: right top;
-    height: 0.35em;
-    background: white;
+    height: 0.3em;
+    background: #fff;
     transition: transform 0.3s, bottom 0.3s;
-    border-radius: 5px
+    border-radius: 0px 10px 10px 0px;
   }
+
   .menu.open .bit-1:before {
-    top: 0.6em;
+    top: 0.4em;
     width: 1.2em;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     transform-origin: left bottom;
     transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
-    background: #FFDCEA;
+    background: #FF2121;
   }
+
   .menu.open .bit-1:after {
-    top: 0.6em;
+    top: 0.4em;
     width: 1.2em;
-    transform: rotate(-30deg);
+    transform: rotate(-45deg);
     transform-origin: right bottom;
     transition: transform 0.3s 0.3s, width 0.3s 0.3s, top 0.3s 0.3s;
-    background: #FFDCEA;
+    background: #FF2121;
   }
+
   .menu.open .bit-2 {
     width: 0.3em;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(45deg);
     transition: transform 0.3s 0.3s, width 0.3s;
-    background: #FFDCEA;
+    background: #FF2121;
   }
+
   .menu.open .bit-3:before {
-    bottom: 0.6em;
+    bottom: 0.4em;
     width: 1.2em;
-    transform: rotate(-30deg);
+    transform: rotate(-45deg);
     transform-origin: left top;
     transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
-    background: #FFDCEA;
+    background: #FF2121;
   }
+
   .menu.open .bit-3:after {
-    bottom: 0.6em;
+    bottom: 0.4em;
     width: 1.2em;
-    transform: rotate(30deg);
+    transform: rotate(45deg);
     transform-origin: right top;
     transition: transform 0.3s 0.3s, width 0.3s 0.3s, bottom 0.3s 0.3s;
-    background: #FFDCEA;
+    background: #FF2121;
   }
+
   .top-nav {
     position: fixed;
-    height: 50px;
+    height: 75px;
     align-items: center;
     width: 100%;
     display: flex;
-    background: #0f0f0f;
+    background: none;
     z-index: 1001101010;
   }
-  nav {
-    z-index: 9999991111212123123;
-    color: black;
-    width: 100%;
-    overflow-x: hidden;
-    -webkit-overflow-x: hidden;
-  }
-  .top-nav {
-    background: rgba(0, 0, 0, 0.4);
-    height: 60px;
-    letter-spacing: -0.15em;
-    color: white;
-    display: flex;
-    z-index: 123123132;
-    align-items: center;
-  }
-  .top-nav h1 {
-    width: 85%;
-    padding-left: 15px;
-  }
+
   .nav-logo-div {
-    width: calc(100% - 75px);
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 50px;
+    height: 80px;
   }
+
   .nav-logo {
-    height: 50px;
-    padding-left: 20px;
+    height: 60px;
+    padding: 20px 0 0 20px;
   }
+
   .nav-toggle-div {
     width: 50px;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 80px;
     align-items: center;
     padding-right: 25px;
   }
+
   .nav-toggle {
     width: 45px;
     background: white;
   }
+
+  .nav-header {
+    font-size: 2em;
+    margin-left: 30px;
+    margin-top: 5%;
+    font-family: "coolvetica";
+  }
+
   .nav-expand {
+    background: rgba(0, 0, 0, 0.9);
     display: none;
-    margin-top: 60px;
     position: fixed;
-    z-index: 109809809800;
+    z-index: 100;
     width: 100%;
+    height: 100vh;
   }
+
+  .nav-link {
+    width: 100%;
+    margin: 5% 10px;
+    font-size: 1.5em;
+    font-family: "coolvetica"
+  }
+
   .nav-expand-text {
-    height: 50px;
     display: flex;
-    justify-content: center;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top: 80px;
   }
-  .nav-expand-text a {
-    transform: scale(1.2);
-    padding: 0px 30px;
-    color: white;
-  }
+
   .bug-nav {
     margin-top: -60px;
     z-index: 12312312122312;
   }
+
   .bug-nav2 {
     padding-bottom: 50px;
     z-index: 123123123123
   }
-  /* album */
-  .music {
+
+  .index-body {
+    background: url(img/band2.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     width: 100%;
-    height: 600px;
-    position: relative;
+    height: 100%;
     overflow: hidden;
-    -webkit-overflow: hidden;
   }
-  .album-div h3 {
-    animation: slideUp 1s 1.5s;
-    animation-fill-mode: backwards;
 
-  }
-  .album-div {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 150px;
-    color: white;
-    justify-content: center;
-  }
-  .album-div h6 {
-    width: 100%;
+  .index-main {
+    padding-top: 50%;
     text-align: center;
-    animation: slideUp 1s 1.5s;
-    animation-fill-mode: backwards;
+    height: calc(100%);
+  }
 
+  .album-main {
+    width: 80%;
+    animation: album 2s ease;
   }
-  .album {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
 
-  }
-  .album img {
-    width: 200px;
-    margin: auto;
-    animation: slideUp 1s 1.5s;
-    animation-fill-mode: backwards;
-
-  }
-  .album-icon {
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-    animation: slideUp 1s 1.5s;
-    animation-fill-mode: backwards;
-
-  }
-  .album-bg {
-    background-image: url(images/band2.png);
-    background-size: cover;
-    background-position: center;
-    display: block;
-    filter: blur(10px) brightness(3%);
-    -webkit-filter: blur(10px) brightness(80%);
-    height: 600px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -999999999999;
-    transform: scale(1.1);
-  }
-  /* tour */
-  .tour {
-    background: #FFDCEA;
-    margin-top;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 40px;
-    z-index: 123123123123123
-  }
-  .tour-box {
-    width: 100%;
-  }
-  .tour h3 {
-
-    width: 80px;
-    margin: auto;
-        margin-top: 50px;
-  }
-  .tour p {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.8em;
-    line-height: 2.5em;
-    width: 100%;
-  }
-  .merch-box {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-  }
-  .merch {
-    width: 150px;
-    height: 150px;
-    margin: 30px 10px -20px;
-    border-radius: 20px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .merch-box {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-  }
-  .merch-item a {
-    text-decoration: none;
-    color: black
-  }
-  /* about */
-  .about {
-    padding-bottom: 0px;
-    z-index: 432;
-    overflow: hidden;
-    -webkit-overflow: hidden;
-    position: relative
-  }
-  .about-bg {
-    background-image: url(images/full.png);
-    background-size: cover;
-    background-position: center;
-    display: block;
-    filter: blur(10px) brightness(3%);
-    -webkit-filter: blur(10px) brightness(80%);
-    height: 700px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -999999999999;
-    transform: scale(1.1);
-  }
-  .about-box {
-    color: white;
-    text-align: center;
-    padding: 50px;
-    line-height: 2em;
-    z-index: 423423234;
-  }
-  .about-box h3 {
-    z-index: 423423234;
-    width: 105px;
-    margin: auto;
-    line-height: 1em;
-    margin-bottom: 20px;
-  }
-  .about-box p {
-    font-size: 0.8em;
-    z-index: 423423234;
-  }
-  .cards {
-    width: auto;
-    text-align: center;
-    background: url(images/band3.png);
-    background-position: center;
-    background-size: cover;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    justify-content: center;
-    box-shadow: 5px 5px 5px black;
-  }
-  .ush3 {
-    width: 41px;
-    text-align: center;
-    margin: auto;
-  }
-  .card-box {
-    padding-top: 20px;
-    background: none;
-    z-index: 423423234;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    width: 40%;
-    height: 45vw;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3%;
-    color: black;
-    font-size: 1em;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  .card p {
-    background: white;
-    margin-top: 80%;
-    padding: 3px 5px;
-  }
-  .popup {
-    width: 90%;
-    left: 5%;
-    padding: 0px;
-    margin-top: -55px;
-    z-index: 9999999999999;
-    position: absolute;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 20px;
-    height: auto;
-  }
-  .popup p {
-    width: 100%;
-    margin-top: 30px;
-    font-size: 0.8em;
-    margin: 20px;
-  }
-  .popup h3 {
-    line-height: 1em !important;
-  }
-  .close {
-    margin-top: 0px;
-    width: 100%;
-    height: 30px;
-    background: #FF6F6F;
-    margin-bottom: -20px;
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .brettbg {
-    background-image: url(images/brettblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .zacbg {
-    background-image: url(images/zacblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .keegbg {
-    background-image: url(images/keegblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .emerbg {
-    background-image: url(images/emerblur.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .fontawesome-chevron {
-    font-size: 0.5em;
-  }
-  .footer {
-    height: 150px;
-    background: #FFFFD5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .footer-socials {
-    width: 100%;
-    text-align: center;
+  .album-title {
+    font-family: "coolvetica";
     font-size: 2em;
-    margin-top: 15px;
+    animation: album-title 2s ease;
+  }
+
+  .circles-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 20px;
+    animation: album-circles 2s ease;
+  }
+
+  .circles-main img {
+    width: 50px;
+    padding: 0 10px;
+  }
+
+  .store-body {
+    background: url(img/merchbg.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .store-main {
+    font-family: "coolvetica";
+    padding-bottom: 200px;
+    animation: store 1s ease;
+    padding-top: 150px;
+  }
+
+  .store-header {
+    font-size: 2.5em;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .store-cards {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  .work {
-    height: 300px;
-    background: #B03939;
-    display: none;
+
+  .card {
+    margin: 50px;
+  }
+
+  .card-img {
+    width: 300px;
+  }
+
+  .about-body {
+    background: url(img/jumpy.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  .about-main {
+    padding: 25px 30px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7 1fr);
+    grid-row-gap: 50px;
+    padding-bottom: 200px;
+  }
+
+  .about-text {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-text h1 {
+    font-family: "coolvetica";
+    font-size: 3em;
+  }
+
+  .about-text p {
+    font-family: "montserrat-i";
+    font-size: 1.9em;
+  }
+
+  .about-pictures {
+    padding-top: 50px;
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .about-pic {
+    margin: 2.5%;
+    cursor: pointer !important;
+    width: 45%;
+  }
+
+  .about-pic img {
+    width: 100%;
+  }
+
+  .about-pic p {
+    font-family: "montserrat-i";
+    font-size: 1em;
+  }
+  .visit {
+    font-family: "montserrat-i";
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  #zacoda {
+    display: none !important;
+  }
+
+  #brett {
+    display: none !important;
+  }
+
+  #emeric {
+    display: none !important;
+  }
+
+  #keegan {
+    display: none !important;
+  }
+  .about-tour {
+    margin-top: 50px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 0px;
+  }
+
+  .about-tour h1 {
+    font-family: "coolvetica";
+    font-size: 3em;
+  }
+
+  .about-tour p {
+    font-family: "montserrat-i";
+    font-size: 1.9em;
+  }
+
+  .about-text p {
+    margin-top: 15px;
+  }
+
+  .about-tour p {
+    margin-top: 15px;
+  }
+
+  footer {
+    height: 175px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.77);
+    position: absolute;
+    bottom: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-align: center;
-    font-size: 0.6em;
+  }
+
+  .footer-left {
+    margin-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+  .footer-left h1 {
+    font-family: "coolvetica";
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  .circles-footer {
+    display: flex;
+    margin-left: 00px;
+  }
+
+  .circles-footer img {
+    width: 35px;
+    padding: 0 10px 0 0;
+  }
+
+  .footer-right {
+    margin-right: 50px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .footer-right h1 {
+    font-family: "coolvetica";
+    font-size: 1.2em;
+    margin-bottom: 5px;
   }
 }

@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
   <title>botl.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bottom of The Lake. We're from Oshkosh WI.">
-  <link rel="icon" type="icon/png" href="images/favicon.png">
+  <meta name="description" content="Punk band from Oshkosh WI">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" type="text/css" href="keyframes.css">
+  <link rel='icon' href='img/logo.png' type='icon/png'>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-  <script src="js/jquery-ui.min.js" type="text/javascript"></script>
-  <script>
-    // smooth scrolling js
-    $(document).ready(function() {
-      $("a").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          var hash = this.hash;
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 600, function() {
-            window.location.hash = hash;
-          });
-        }
-      });
-    });
-  </script>
+  <script src="_js/jquery-ui.min.js" type="text/javascript"></script>
 
 </head>
 
 <body>
-  <div id="main">
-    <a class=anchor id=music></a>
+  <div class="index-body">
 
-    <!-- MOBILE NAV -->
+    <nav class="mobile-hide">
+      <h1 class="nav-header">bottom of the lake</h1>
+      <h2 class="nav-links"><a style="text-decoration: underline" href="/index.html">music</a><a href="store.html">store</a><a href="about.html">about</a></h2>
+    </nav>
 
     <nav class="desktop-hide">
       <div class="top-nav">
-        <h1>bottom of the lake</h1>
+        <div class="nav-logo-div">
+          <h1 class="nav-header">bottom of the lake</h1>
+        </div>
         <div class="menu">
           <div class="bit-1"></div>
           <div class="bit-2"></div>
@@ -48,295 +35,72 @@
       </div>
       <div class="nav-expand">
         <div class="nav-expand-text">
-          <a href="#music">
-            <p class="desc">music</p>
+          <a style="text-decoration: underline" class="nav-link" href="index.html">
+            <h1>music</h1>
           </a>
-          <a href="#tour">
-            <p class="desc">tour</p>
+          <a class="nav-link" href="store.html">
+            <h1>store</h1>
           </a>
-          <a href="#about">
-            <p class="desc">about</p>
+          <a class="nav-link" href="about.html">
+            <h1>about</h1>
           </a>
-          <a href="#us">
-            <p class="desc">us</p>
-          </a>
+        </div>
+        <div class="">
+          <footer>
+            <div class="footer-left">
+              <h1 class="">Bottom Of The Lake © 2019</h1>
+              <div class="circles-footer">
+                <a target="_blank "href="https://open.spotify.com/album/2pGqIAY3LYjkIcMNyTxsEi?si=hJgpQKuMSSCSZTizs-KCIg"><img src="img/spotify.png" alt="spotify"></a>
+                <a target="_blank" href="https://bottomofthelakewi.bandcamp.com/album/ill-keep-this-safe-here"><img src="img/bandcamp.png" alt="bandcamp"></a>
+              </div>
+            </div>
+            <div class="footer-right">
+              <h1>Made with <a target=_blank href="https://adamgaff.com/" style="font-family: 'product-sans'">adamgaff.com</a></h1>
+            </div>
+            <h1></h1>
+          </footer>
         </div>
       </div>
     </nav>
 
-    <!-- desktop nav -->
-    <nav class="mobile-hide">
-      <div class="top-nav">
-        <h1>bottom of the lake</h1>
-        <div class="links">
-          <a href="#music">
-            <p class="desc">music</p>
-          </a>
-          <a href="#tour">
-            <p class="desc">tour</p>
-          </a>
-          <a href="#about">
-            <p class="desc">about</p>
-          </a>
-          <a href="#us">
-            <p class="desc">us</p>
-          </a>
+    <div class="index-main">
+      <img class="album-main" src="img/album.jpg" alt="Album art">
+      <div class="">
+        <h1 class="album-title">I'll Keep This Safe Here</h1>
+        <div class="circles-main">
+          <a target="_blank " href="https://open.spotify.com/album/2pGqIAY3LYjkIcMNyTxsEi?si=hJgpQKuMSSCSZTizs-KCIg"><img src="img/spotify.png" alt="spotify"></a>
+          <a target="_blank" href="https://bottomofthelakewi.bandcamp.com/album/ill-keep-this-safe-here"><img src="img/bandcamp.png" alt="bandcamp"></a>
         </div>
       </div>
-    </nav>
-
-
-    <main>
-      <div class="music">
-        <div class="album-bg"></div>
-        <div class="album-div">
-          <h3>newest release</h3>
-          <div class=album>
-            <img src="images/album.jpg" />
-          </div>
-          <h6>i'll keep this safe here</h6>
-          <a href="https://open.spotify.com/album/2pGqIAY3LYjkIcMNyTxsEi?si=hJgpQKuMSSCSZTizs-KCIg"><img class=album-icon src="images/spotify.png" /></a>
-          <a href="https://bottomofthelakewi.bandcamp.com/album/ill-keep-this-safe-here"><img class=album-icon src="images/bandcamp.png" /></a>
-        </div>
-
-      </div>
-      <a class=anchor id=tour></a>
-      <div class="tour">
-        <div class=tour-box>
-
-          <h3>tour</h3>
-          <p>
-            may 16 - penthouse penthouse - indianapolis mn<br /> may 17 - thunderbird event center - moundsville wv <br />march 18 - bless this mess - akron oh<br />
-          </p>
-          <br />
-
-        </div>
-          <h3>merch</h3>
-        <div class=merch-box>
-
-          <div class=merch-item>
-            <a href="https://bottomofthelakewi.bandcamp.com/merch/balloon-t-shirt-2"><img class=merch src="images/shirt.png" />
-            <p>
-              balloon t-shirt
-            </p>
-          </a>
-          </div>
-          <div class=merch-item>
-            <a href="https://bottomofthelakewi.bandcamp.com/merch/couch-t-shirt"><img class=merch src="images/shirt2.png" />
-            <p>
-              couch t-shirt
-            </p>
-          </a>
-          </div>
-          <div class=merch-item>
-            <a href="https://bottomofthelakewi.bandcamp.com/album/ill-keep-this-safe-here">
-            <img class=merch src="images/album.jpg" />
-            <p>
-              cd
-            </p>
-          </a>
-          </div>
-        </div>
-      </div>
-      <a class=anchor id=about></a>
-      <div class=about>
-        <div class="about-bg"></div>
-        <div class=about-box>
-          <h3>about us</h3>
-          <p>
-            Bottom of the Lake is made up of Zacoda Glass (drums), Brett Schlidt (rhythm guitar and vocals), Emeric Meilhon (bass), and Keegan Sweeney (lead guitar).<br /> The EP ‘Everybody Knows Everything About Everyone’ was written between November
-            of 2016 and March of 2017, and was self-recorded the following April. ‘EEE’ was released on May 22, 2017.<br /> ‘I’ll Keep This Safe Here’ was produced, mixed, and mastered by Jeff Leber at Prairie State Records in Johnsburg, IL. ‘IKTSH’ came
-            out on July 26, 2018.
-          </p>
-        </div>
-
-        <a class=anchor id=us></a>
-        <div class=cards>
-          <h3 class=ush3>us</h3>
-          <div class="popup brettbg" id=brett>
-
-            <h3>brett</h3><br />
-            <p>
-              Hey. I sing and play rhythm guitar. I didn’t start taking music all that seriously until I was maybe 17 or 18. I grew up around music, with my oldest brother being the biggest inspiration to me, in many ways. He played different instruments and was in
-              bands. I eventually picked up on the music he listened to, and began shaping my own interests from there. I never thought I’d be playing music with other people, though. When I first started writing, it was just solo stuff. I had some songs
-              on Bandcamp that were pretty terrible. Zacoda sent me a DM on Instagram one day that literally just said “let’s start a band,” and here we are. Music is the most important thing in my life. I have never experienced anything like it. The
-              small yet strong amount of support we have received so far has been so unbelievably humbling. A large majority of my friends I have today are people I have met in the last two years from being in this band. I have never felt so much love
-              and purpose. I hope to keep playing shows, and meet some new people. Thanks
-            </p>
-            <h3 class=close id=close>close</h3>
-          </div>
-
-          <div class="popup zacbg" id=zacoda>
-
-            <h3>zacoda</h3><br />
-            <p>
-              I play drums in Bottom of the Lake, and am one of the two members that brought this band to life. I was named after the Coda album by Led Zeppelin. So basically, music was threaded into my being from birth. All of my favorite memories from when I was
-              a kid are linked to music; from attending OzzFest multiple times with my dad, to going to shows with my friends at 13. I have good and bad memories attached to music. To me, that’s what life is; good and bad, ups and downs. Through it all
-              though, music has kept me sane. Music has always made everything in my life more intense, almost like a drug. My goal through Bottom of the Lake is to make people feel, and know that they’re not alone. I want to travel as far as we possibly
-              can, and relate to absolute strangers through songs that three friends and I have made. Thanks to anyone that supports us. Cheers.
-            </p>
-            <h3 class=close id=close>close</h3>
-          </div>
-          <div class="popup emerbg" id=emeric>
-
-            <h3>emeric</h3><br />
-            <p>
-              My name is Emeric, and I play bass in Bottom of the Lake. Ever since I was born, I've been surrounded by music; whether it was my uncle playing multiple musicals, my grandpa conducting the Fond du Lac Symphonic Band, or my mom showing me her extensive
-              Madonna collection. At the age of 7, my mom got me into playing piano, and then I switched to trombone in 5th grade. Being involved in music while in middle school was great, but I was 13 and the trombone wasn’t impressing the girls, so
-              I picked up my dad’s guitar and started learning whatever I could. Shortly after, I realized that the girls didn’t really care anyway, and that the bass guitar is the best thing since sliced bread. Since I got my first bass, I’ve always
-              loved writing music, learning groovy basslines, and playing in a band. When I was 16, Brett and I played in a different band together for a bit, only for him to ask me months later to join him and Zacoda on this project. Seeing the support
-              from that moment has only cemented my love for BOTL, and music as a whole. Thank you so much for everything!! Love you.
-            </p>
-            <h3 class=close id=close>close</h3>
-          </div>
-          <div class="popup keegbg" id=keegan>
-
-            <h3>keegan</h3><br />
-            <p>
-              I play lead guitar in the band. When I was 7 years old, I started taking piano lessons. From there, I picked up the trombone in school, and began learning a lot about music theory. I started playing guitar, and most other instruments came somewhat naturally
-              to me. Listening to music and playing music have have gotten me through a lot of tough times. I think it’s one of the most important things for all of us to take part in. My hope, for myself and Bottom of the Lake, is that we’ll be able
-              to have people experience music in a way that they never have before, and for them to be able to use our music to help them through tough times, just as other music has for me. Beside us being in a band, I want us to be a group of approachable
-              people who can talk face-to-face with people we meet at shows. Thank you to everyone for the support!
-            </p>
-            <h3 class=close id=close>close</h3>
-          </div>
-          <div class="card-box">
-            <div class=card id=brettcard style="background: url(images/brett2.png); background-size: cover; background-position: center;">
-              <p>
-                brett <i class="fas fa-chevron-down fontawesome-chevron"></i>
-              </p>
-            </div>
-            <div class=card id=zaccard style="background: url(images/zac2.png); background-size: cover; background-position: center;">
-              <p>
-                zacoda <i class="fas fa-chevron-down fontawesome-chevron"></i>
-              </p>
-            </div>
-            <div class=card id=emercard style="background: url(images/emer.png); background-size: cover; background-position: center;">
-              <p>
-                emeric <i class="fas fa-chevron-down fontawesome-chevron"></i>
-              </p>
-            </div>
-            <div class=card id=keegcard style="background: url(images/keeg.png); background-size: cover; background-position: center;">
-              <p>
-                keegan <i class="fas fa-chevron-down fontawesome-chevron"></i>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-      <div class=footer>
-        <div class=footer-socials>
-          <a target=_blank href=https://m.facebook.com/bottomofthelakewi/><i class="fab fa-facebook-f"></i></a>
-          <a target=_blank href=https://mobile.twitter.com/botlwi><i class="fab fa-twitter"></i></a>
-          <a target=_blank href=https://www.instagram.com/bottomofthelake/><i class="fab fa-instagram"></i></a>
-          <a target=_blank href=https://open.spotify.com/artist/1FSkPjDxPMrDjUavxEElg1?si=i7nE3gVnS5mVG61Qtt7h7A><i class="fab fa-spotify"></i></a>
-          <a target=_blank href=https://bottomofthelakewi.bandcamp.com/><i class="fab fa-bandcamp"></i></a>
-        </div>
-        <h5 style="width:100%; text-align: center">bottom of the lake <i class="far fa-copyright"></i> 2019</h5><br />
-        <h6>made at <a target=_blank href="http://adamgaff.com">adamgaff.com</a></h6>
-
-      </div>
-
-    </main>
-
-
-    <!-- nav menu -->
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $(".menu").click(function() {
-          $(".nav-expand").toggle("slide", {
-            direction: 'right'
-          });
-        });
-        $(".icon").click(function() {
-          $(".nav-expand").slideUp(100);
-        })
-      });
-    </script>
-    <!-- icon changing -->
-    <script type="text/javascript">
-      var menu = document.querySelector('.menu');
-
-      function toggleMenu() {
-        menu.classList.toggle('open');
-      }
-      menu.addEventListener('click', toggleMenu);
-    </script>
-
-    <script>
-      $(window).load(function() {
-        $(".col-3 input").val("");
-
-        $(".input-effect input").focusout(function() {
-          if ($(this).val() != "") {
-            $(this).addClass("has-content");
-          } else {
-            $(this).removeClass("has-content");
-          }
-        })
-      });
-    </script>
-
-
-    <!-- smooth scrolling -->
-    <script>
-      $(document).ready(function() {
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
-
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function() {
-
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-          } // End if
-        });
-      });
-    </script>
-
-    <!-- card popups -->
-    <script type="text/javascript">
-      $("#brett").hide();
-      $("#zacoda").hide();
-      $("#keegan").hide();
-      $("#emeric").hide();
-
-      $("#brettcard").click(function() {
-        $("#brett").slideDown(600)
-      })
-      $("#zaccard").click(function() {
-        $("#zacoda").slideDown(600)
-      })
-      $("#keegcard").click(function() {
-        $("#keegan").slideDown(600)
-      })
-      $("#emercard").click(function() {
-        $("#emeric").slideDown(600)
-      })
-
-      $(".close").click(function() {
-        $("#brett").slideUp(600);
-        $("#zacoda").slideUp(600);
-        $("#keegan").slideUp(600);
-        $("#emeric").slideUp(600);
-
-      })
-    </script>
-
+    </div>
   </div>
+  <!-- nav menu -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".menu").click(function() {
+      $(".nav-expand").toggle("slide", {
+        direction: 'up',
+        duration: 600
+      });
+    });
+    $(".here").click(function() {
+      $(".nav-expand").toggle("slide", {
+        direction: 'up',
+        duration: 600
+      });
+    });
+    $(".nav-link").click(function() {
+      $(".nav-expand").slideUp(600);
+    })
+  });
+</script>
+
+<script type="text/javascript">
+  var menu = document.querySelector('.menu');
+
+  function toggleMenu() {
+    menu.classList.toggle('open');
+  }
+  menu.addEventListener('click', toggleMenu);
+</script>
 </body>
