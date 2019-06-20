@@ -1,6 +1,10 @@
 @font-face {
   font-family: "coolvetica";
-  src: url("/fonts/coolvetica rg.tff")
+  src: url("/fonts/coolvetica rg.ttf")
+}
+@font-face {
+  font-family: "coolvetica";
+  src: url("/fonts/coolvetica_rg-webfot.ttf")
 }
 
 @font-face {
